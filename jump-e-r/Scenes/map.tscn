@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dd2mvg6k6luef" path="res://Scenes/player.tscn" id="1_myvm1"]
 [ext_resource type="Texture2D" uid="uid://bok0r4vdxd48i" path="res://Assets/Dirt.png" id="2_q0mm3"]
-[ext_resource type="Texture2D" uid="uid://c6tm7xwdyf82d" path="res://brackeys_platformer_assets/sprites/world_tileset.png" id="3_np2xp"]
+[ext_resource type="Texture2D" uid="uid://c6tm7xwdyf82d" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="3_np2xp"]
 [ext_resource type="AudioStream" uid="uid://demyqgvyrsyiq" path="res://Assets/Korrupt.mp3" id="4_w7jjh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wijl4"]
