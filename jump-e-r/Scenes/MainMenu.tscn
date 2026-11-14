@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://cu5newr2xfxd"]
+
+[ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
+[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/icon.svg" id="2_eiy7p"]
+[ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
+texture = ExtResource("2_eiy7p")
+modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7a2f"]
+texture = ExtResource("2_eiy7p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eiy7p"]
+texture = ExtResource("2_eiy7p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54mwi"]
+texture = ExtResource("2_eiy7p")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7a2f"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 4.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h7a2f")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_42r2q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -295.0
+offset_top = -6.0
+offset_right = 264.0
+offset_bottom = 159.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 10
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h7a2f")
+text = "
+Play Game
+ 
+ "
+icon_alignment = 1
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h7a2f")
+text = " 
+Options & Credits
+ "
+
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
+<<<<<<< HEAD
+text = "  
+
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  
+=======
+text = " 
+ 
+>>>>>>> 65246b3301e8cc6375d1ffdaeaa57e25c5ea7f59
+=======
+  Our Github
+>>>>>>> Stashed changes
+=======
+  Our Github
+>>>>>>> Stashed changes
+ "
+
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/Button3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -9.25
+offset_right = 39.5
+offset_bottom = 7.75
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.7680918, 0.41388714, 0.7680918, 1)
+theme_override_colors/font_hover_color = Color(1.5598607, 0.68947756, 1.451813, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+text = "Our Github"
+underline = 1
+uri = "https://github.com/Guyiy1324/Jumpe-r-r-r-r-r-r-r-r"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 69.0
+offset_right = 1144.0
+offset_bottom = 276.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.2784314)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 100
+text = "Jumpe r r r r r r r r"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qoqlk")
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
