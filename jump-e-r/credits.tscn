@@ -76,6 +76,7 @@ text = "Back"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=159258769]
 stream = ExtResource("3_g4wvt")
+volume_db = 3.0
 autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
