@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c213e04b25674"]
 
 [ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://options_&_credits.gd" id="1_4o6pv"]
+[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="2_yveac"]
 
 [node name="Options & Credits" type="Control" unique_id=1102423414]
 layout_mode = 3
@@ -36,6 +37,91 @@ offset_right = 1119.0
 offset_bottom = 622.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
+
+[node name="Label" type="Label" parent="." unique_id=1808622530]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -84.5
+offset_top = 61.0
+offset_right = 84.5
+offset_bottom = 125.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_yveac")
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Label2" type="Label" parent="." unique_id=1693059145]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 118.0
+offset_right = 251.0
+offset_bottom = 173.0
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="SFX" type="HSlider" parent="Label2" unique_id=1292370777]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 123.0
+offset_right = 306.0
+offset_bottom = 163.0
+value = 50.0
+
+[node name="Label2" type="Label" parent="Label2/SFX" unique_id=867662260]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 30.0
+text = "0"
+
+[node name="Label2" type="Label" parent="Label2/SFX/Label2" unique_id=1372795929]
+layout_mode = 0
+offset_left = 326.0
+offset_right = 366.0
+offset_bottom = 23.0
+text = "100"
+
+[node name="Label" type="Label" parent="Label2/SFX" unique_id=630956791]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -42.0
+offset_right = 48.0
+theme_override_font_sizes/font_size = 30
+text = "SFX"
+
+[node name="Music" type="HSlider" parent="Label2" unique_id=1189550951]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 234.0
+offset_right = 308.0
+offset_bottom = 274.0
+value = 50.0
+
+[node name="Label2" type="Label" parent="Label2/Music" unique_id=139216925]
+layout_mode = 0
+offset_left = -15.0
+offset_top = 7.0
+offset_right = 25.0
+offset_bottom = 30.0
+text = "0"
+
+[node name="Label2" type="Label" parent="Label2/Music/Label2" unique_id=1592688935]
+layout_mode = 0
+offset_left = 326.0
+offset_right = 366.0
+offset_bottom = 23.0
+text = "100"
+
+[node name="Label" type="Label" parent="Label2/Music" unique_id=932464103]
+layout_mode = 0
+offset_left = -3.0
+offset_top = -42.0
+offset_right = 48.0
+theme_override_font_sizes/font_size = 30
+text = "Music"
 
 [connection signal="pressed" from="Button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_back_pressed"]
