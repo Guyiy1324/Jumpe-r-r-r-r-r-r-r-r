@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dk4eiqvunfb74"]
+[gd_scene format=3 uid="uid://cv14wmy676i5u"]
 
 [ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://Scripts/options_&_credits.gd" id="1_4o6pv"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="2_yveac"]
