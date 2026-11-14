@@ -11,70 +11,65 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 4.0
+offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=1151985260]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1311457273]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -15.5
-offset_right = 81.0
-offset_bottom = 15.5
+offset_left = -279.5
+offset_top = -126.5
+offset_right = 279.5
+offset_bottom = 126.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
-theme_override_fonts/font = ExtResource("1_i26rj")
-theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
-text = "Options & Credits"
 
-[node name="Button2" type="Button" parent="." unique_id=1590294479]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = 34.5
-offset_right = 81.0
-offset_bottom = 65.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1151985260]
+layout_mode = 2
 theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+text = "
+Play Game
+ 
+ "
+icon_alignment = 1
 
-[node name="Button3" type="Button" parent="." unique_id=2017524966]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -63.5
-offset_right = 81.0
-offset_bottom = -32.5
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1590294479]
+layout_mode = 2
 theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
-text = "Play Game"
+text = " 
+Options & Credits
+ "
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=2017524966]
+layout_mode = 2
+theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
+theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+text = "  
+  Our Github
+  
+ "
 
 [node name="LinkButton" type="LinkButton" parent="." unique_id=1445002077]
 layout_mode = 0
-offset_left = 494.0
-offset_top = 357.0
-offset_right = 658.0
-offset_bottom = 391.0
+offset_left = 296.5
+offset_top = 306.5
+offset_right = 855.5
+offset_bottom = 361.0
 offset_transform_enabled = true
-offset_transform_position = Vector2(42, 8)
+offset_transform_position = Vector2(244.5, 18)
 theme_override_colors/font_color = Color(0.7680918, 0.41388714, 0.7680918, 1)
 theme_override_colors/font_hover_color = Color(1.5598607, 0.68947756, 1.451813, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
