@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ch144sh88v34p"]
 
-[ext_resource type="Script" uid="uid://ccc4ngp7s0046" path="res://Scenes/credits.gd" id="1_ccovl"]
+[ext_resource type="Script" uid="uid://ccc4ngp7s0046" path="res://Scripts/credits.gd" id="1_ccovl"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_g4wvt"]
 
