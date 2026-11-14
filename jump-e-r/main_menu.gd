@@ -16,4 +16,4 @@ func _on_start_pressed() -> void:
 
 
 func _on_options_pressed() -> void:
-	print("gay")
+	get_tree().change_scene_to_file("res://options_&_credits.tscn")
