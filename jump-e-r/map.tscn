@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://bowypy6ymcv6g"]
+
+[ext_resource type="Texture2D" uid="uid://bok0r4vdxd48i" path="res://Dirt.png" id="1_c7s6e"]
+[ext_resource type="PackedScene" uid="uid://dd2mvg6k6luef" path="res://player.tscn" id="2_wijl4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wijl4"]
+
+[node name="Map" type="Node2D"]
+position = Vector2(582, 87.00001)
+scale = Vector2(5.12429, 0.47962236)
+
+[node name="Platforms" type="Node" parent="."]
+
+[node name="Platform" type="Area2D" parent="Platforms"]
+position = Vector2(582, 87.00001)
+scale = Vector2(5.12429, 0.47962236)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform"]
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform"]
+texture = ExtResource("1_c7s6e")
+
+[node name="Plat form" type="Area2D" parent="Platforms"]
+position = Vector2(1260.9999, -241.00003)
+rotation = -3.1415927
+scale = Vector2(0.673111, -2.8373497)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Plat form"]
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
+texture = ExtResource("1_c7s6e")
+
+[node name="Platform little 2" type="Area2D" parent="Platforms"]
+position = Vector2(425, -417.99997)
+scale = Vector2(0.98506844, 0.27012363)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform little 2"]
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform little 2"]
+texture = ExtResource("1_c7s6e")
+
+[node name="Platform little" type="Area2D" parent="Platforms"]
+position = Vector2(866, -331)
+scale = Vector2(0.964335, 0.24261795)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform little"]
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform little"]
+texture = ExtResource("1_c7s6e")
+
+[node name="Win Platform" type="Area2D" parent="Platforms"]
+position = Vector2(-51, -499.00003)
+scale = Vector2(1.4354614, 0.24660836)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Win Platform"]
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platforms/Win Platform"]
+texture = ExtResource("1_c7s6e")
+
+[node name="Player" parent="." instance=ExtResource("2_wijl4")]
+position = Vector2(-113.77186, -331.5108)
+scale = Vector2(0.28012884, 2.9327412)
