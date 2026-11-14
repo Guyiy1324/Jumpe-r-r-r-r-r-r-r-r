@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cysrelxgu210s" path="res://sfx.gd" id="3_0hipb"]
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Toenail.mp3" id="3_o2i8r"]
 [ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://music.gd" id="4_n5wdl"]
+[ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://fullscreen.gd" id="6_n5wdl"]
 
 [node name="Options & Credits" type="Control" unique_id=1102423414]
 layout_mode = 3
@@ -25,11 +26,11 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=245998403]
 layout_mode = 0
-offset_left = 519.0
-offset_top = 540.0
-offset_right = 785.0
-offset_bottom = 623.0
-theme_override_font_sizes/font_size = 50
+offset_left = 669.0
+offset_top = 399.0
+offset_right = 918.0
+offset_bottom = 462.0
+theme_override_font_sizes/font_size = 40
 text = "Credits"
 
 [node name="Button2" type="Button" parent="." unique_id=1023301801]
@@ -139,7 +140,29 @@ stream = ExtResource("3_o2i8r")
 autoplay = true
 bus = &"Music"
 
+[node name="Fullscreen" type="CheckButton" parent="." unique_id=2019173016]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.671
+anchor_bottom = 0.5
+offset_left = 840.0
+offset_top = 192.0
+offset_right = 111.007996
+offset_bottom = -108.0
+scale = Vector2(2, 2)
+script = ExtResource("6_n5wdl")
+
+[node name="Label3" type="Label" parent="." unique_id=1791944262]
+layout_mode = 0
+offset_left = 696.0
+offset_top = 193.99997
+offset_right = 844.0
+offset_bottom = 235.99997
+theme_override_font_sizes/font_size = 30
+text = "Fullscreen"
+
 [connection signal="pressed" from="Button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Label2/SFX" to="Label2/SFX" method="_on_value_changed"]
 [connection signal="value_changed" from="Label2/Music" to="Label2/Music" method="_on_value_changed"]
+[connection signal="toggled" from="Fullscreen" to="Fullscreen" method="_on_toggled"]
