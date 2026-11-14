@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu5newr2xfxd"]
+[gd_scene format=3 uid="uid://cu5newr2xfxd"]
 
 [ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/icon.svg" id="2_eiy7p"]
 
@@ -37,21 +37,21 @@ func _physics_process(delta: float) -> void:
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Node2D" unique_id=1244357428]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1011108329]
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Area2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Area2D" unique_id=1044535887]
 physics_interpolation_mode = 1
 floor_block_on_wall = false
 script = SubResource("GDScript_4flbx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/CharacterBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/CharacterBody2D" unique_id=1052982262]
 scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D/CharacterBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CharacterBody2D" unique_id=1138833155]
 texture = ExtResource("2_eiy7p")
 
-[node name="Camera2D" type="Camera2D" parent="Area2D/CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="Area2D/CharacterBody2D" unique_id=953526461]
 zoom = Vector2(0.5, 0.5)
