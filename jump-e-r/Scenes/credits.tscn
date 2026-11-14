@@ -3,6 +3,18 @@
 [ext_resource type="Script" uid="uid://ccc4ngp7s0046" path="res://Scripts/credits.gd" id="1_ccovl"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_g4wvt"]
+[ext_resource type="Texture2D" path="res://Assets/button.png" id="button_art"]
+
+[sub_resource type="StyleBoxTexture" id="button_normal"]
+texture = ExtResource("button_art")
+
+[sub_resource type="StyleBoxTexture" id="button_hover"]
+texture = ExtResource("button_art")
+modulate_color = Color(1.2, 1.2, 1.2, 1)
+
+[sub_resource type="StyleBoxTexture" id="button_pressed"]
+texture = ExtResource("button_art")
+modulate_color = Color(0.72, 0.72, 0.72, 1)
 
 [node name="Credits" type="Control" unique_id=1820686762]
 layout_mode = 3
@@ -72,11 +84,15 @@ offset_bottom = -39.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("button_normal")
+theme_override_styles/hover = SubResource("button_hover")
+theme_override_styles/pressed = SubResource("button_pressed")
 text = "Back"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1412878892]
 stream = ExtResource("3_g4wvt")
 volume_db = 3.0
 autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

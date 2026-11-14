@@ -1,11 +1,7 @@
 [gd_scene format=3 uid="uid://b4mqx81580ntb"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" path="res://player.gd" id="1_onrkg"]
-=======
-[ext_resource type="Script" uid="uid://bohfwsut3xswq" path="res://player.gd" id="1_onrkg"]
->>>>>>> Stashed changes
-[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://icon.svg" id="2_i3pqv"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/icon.svg" id="2_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
 

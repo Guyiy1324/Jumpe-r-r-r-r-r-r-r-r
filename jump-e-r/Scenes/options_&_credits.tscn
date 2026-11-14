@@ -6,6 +6,18 @@
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_o2i8r"]
 [ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://Scripts/music.gd" id="4_n5wdl"]
 [ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://Scripts/fullscreen.gd" id="6_n5wdl"]
+[ext_resource type="Texture2D" path="res://Assets/button.png" id="button_art"]
+
+[sub_resource type="StyleBoxTexture" id="button_normal"]
+texture = ExtResource("button_art")
+
+[sub_resource type="StyleBoxTexture" id="button_hover"]
+texture = ExtResource("button_art")
+modulate_color = Color(1.2, 1.2, 1.2, 1)
+
+[sub_resource type="StyleBoxTexture" id="button_pressed"]
+texture = ExtResource("button_art")
+modulate_color = Color(0.72, 0.72, 0.72, 1)
 
 [node name="Options & Credits" type="Control"]
 layout_mode = 3
@@ -31,6 +43,9 @@ offset_top = 399.0
 offset_right = 918.0
 offset_bottom = 462.0
 theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("button_normal")
+theme_override_styles/hover = SubResource("button_hover")
+theme_override_styles/pressed = SubResource("button_pressed")
 text = "Credits"
 
 [node name="Button2" type="Button" parent="."]
@@ -40,6 +55,9 @@ offset_top = 539.0
 offset_right = 1119.0
 offset_bottom = 622.0
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("button_normal")
+theme_override_styles/hover = SubResource("button_hover")
+theme_override_styles/pressed = SubResource("button_pressed")
 text = "Back"
 
 [node name="Label" type="Label" parent="."]
