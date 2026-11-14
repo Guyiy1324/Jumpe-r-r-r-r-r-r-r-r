@@ -95,11 +95,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 text = "  
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   
 =======
 text = " 
  
 >>>>>>> 65246b3301e8cc6375d1ffdaeaa57e25c5ea7f59
+=======
+  Our Github
+>>>>>>> Stashed changes
 =======
   Our Github
 >>>>>>> Stashed changes
