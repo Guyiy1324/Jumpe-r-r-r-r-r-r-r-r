@@ -91,23 +91,7 @@ theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
-<<<<<<< HEAD
-text = "  
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  
-=======
-text = " 
- 
->>>>>>> 65246b3301e8cc6375d1ffdaeaa57e25c5ea7f59
-=======
-  Our Github
->>>>>>> Stashed changes
-=======
-  Our Github
->>>>>>> Stashed changes
- "
+text = " "
 
 [node name="LinkButton" type="LinkButton" parent="VBoxContainer/Button3"]
 layout_mode = 1
@@ -150,6 +134,5 @@ vertical_alignment = 1
 stream = ExtResource("4_qoqlk")
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]

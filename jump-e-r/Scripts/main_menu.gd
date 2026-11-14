@@ -12,8 +12,8 @@ func _process(_delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://map.tscn")
+	get_tree().change_scene_to_file("res://Scenes/map.tscn")
 
 
 func _on_options_pressed() -> void:
-	get_tree().change_scene_to_file("res://options_&_credits.tscn")
+	get_tree().change_scene_to_file("res://Scenes/options_&_credits.tscn")
