@@ -136,7 +136,6 @@ text = "Music"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=456070347]
 stream = ExtResource("3_o2i8r")
-volume_db = 5.821
 autoplay = true
 bus = &"Music"
 

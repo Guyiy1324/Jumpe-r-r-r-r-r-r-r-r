@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dfqb47cve2lnm" path="res://credits.gd" id="1_c1t8d"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="1_nm7lk"]
+[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Toenail.mp3" id="3_g4wvt"]
 
 [node name="Credits" type="Control" unique_id=313220374]
 layout_mode = 3
@@ -72,5 +73,9 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=159258769]
+stream = ExtResource("3_g4wvt")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="1_i26rj"]
 [ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://icon.svg" id="2_eiy7p"]
+[ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Friday Commute.mp3" id="4_qoqlk"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
 texture = ExtResource("2_eiy7p")
@@ -133,6 +134,10 @@ theme_override_font_sizes/font_size = 100
 text = "Jumpe r r r r r r r r"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=933381378]
+stream = ExtResource("4_qoqlk")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
