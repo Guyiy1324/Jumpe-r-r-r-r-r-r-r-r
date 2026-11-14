@@ -1,22 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://c213e04b25674"]
+[gd_scene format=3 uid="uid://c213e04b25674"]
 
-[ext_resource type="Script" path="res://options_&_credits.gd" id="1_4o6pv"]
-[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="2_yveac"]
-[ext_resource type="Script" path="res://sfx.gd" id="3_0hipb"]
-[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Toenail.mp3" id="3_o2i8r"]
-[ext_resource type="Script" path="res://music.gd" id="4_n5wdl"]
-[ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://fullscreen.gd" id="6_n5wdl"]
+[ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://Scripts/options_&_credits.gd" id="1_34rrg"]
+[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="2_v654p"]
+[ext_resource type="Script" uid="uid://cysrelxgu210s" path="res://Scripts/sfx.gd" id="3_34rrg"]
+[ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://Scripts/music.gd" id="4_3dgqy"]
+[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="5_dmegd"]
+[ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://Scripts/fullscreen.gd" id="6_8uakx"]
 
-[node name="Options & Credits" type="Control"]
+[node name="Options & Credits" type="Control" unique_id=1701710490]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4o6pv")
+script = ExtResource("1_34rrg")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1799898255]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1305859519]
 layout_mode = 0
 offset_left = 669.0
 offset_top = 399.0
@@ -33,7 +33,7 @@ offset_bottom = 462.0
 theme_override_font_sizes/font_size = 40
 text = "Credits"
 
-[node name="Button2" type="Button" parent="."]
+[node name="Button2" type="Button" parent="." unique_id=483260658]
 layout_mode = 0
 offset_left = 853.0
 offset_top = 539.0
@@ -42,7 +42,7 @@ offset_bottom = 622.0
 theme_override_font_sizes/font_size = 50
 text = "Back"
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1538158779]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -52,11 +52,11 @@ offset_top = 61.0
 offset_right = 84.5
 offset_bottom = 125.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("2_yveac")
+theme_override_fonts/font = ExtResource("2_v654p")
 theme_override_font_sizes/font_size = 50
 text = "Options"
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=1492601121]
 layout_mode = 0
 offset_left = 126.0
 offset_top = 172.0
@@ -65,7 +65,7 @@ offset_bottom = 227.0
 theme_override_font_sizes/font_size = 40
 text = "Volume"
 
-[node name="SFX" type="HSlider" parent="Label2"]
+[node name="SFX" type="HSlider" parent="Label2" unique_id=748552202]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 123.0
@@ -74,10 +74,10 @@ offset_bottom = 163.0
 max_value = 1.0
 step = 0.01
 value = 0.75
-script = ExtResource("3_0hipb")
+script = ExtResource("3_34rrg")
 audio_bus_name = "SFX"
 
-[node name="Label2" type="Label" parent="Label2/SFX"]
+[node name="Label2" type="Label" parent="Label2/SFX" unique_id=152671271]
 layout_mode = 0
 offset_left = -15.0
 offset_top = 7.0
@@ -85,14 +85,14 @@ offset_right = 25.0
 offset_bottom = 30.0
 text = "0"
 
-[node name="Label2" type="Label" parent="Label2/SFX/Label2"]
+[node name="Label2" type="Label" parent="Label2/SFX/Label2" unique_id=2071374628]
 layout_mode = 0
 offset_left = 326.0
 offset_right = 366.0
 offset_bottom = 23.0
 text = "100"
 
-[node name="Label" type="Label" parent="Label2/SFX"]
+[node name="Label" type="Label" parent="Label2/SFX" unique_id=1845299830]
 layout_mode = 0
 offset_left = -3.0
 offset_top = -42.0
@@ -100,7 +100,7 @@ offset_right = 48.0
 theme_override_font_sizes/font_size = 30
 text = "SFX"
 
-[node name="Music" type="HSlider" parent="Label2"]
+[node name="Music" type="HSlider" parent="Label2" unique_id=2133174889]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 234.0
@@ -109,10 +109,10 @@ offset_bottom = 274.0
 max_value = 1.0
 step = 0.01
 value = 0.75
-script = ExtResource("4_n5wdl")
+script = ExtResource("4_3dgqy")
 audio_bus_name = "Music"
 
-[node name="Label2" type="Label" parent="Label2/Music"]
+[node name="Label2" type="Label" parent="Label2/Music" unique_id=1812602947]
 layout_mode = 0
 offset_left = -15.0
 offset_top = 7.0
@@ -120,14 +120,14 @@ offset_right = 25.0
 offset_bottom = 30.0
 text = "0"
 
-[node name="Label2" type="Label" parent="Label2/Music/Label2"]
+[node name="Label2" type="Label" parent="Label2/Music/Label2" unique_id=1513446702]
 layout_mode = 0
 offset_left = 326.0
 offset_right = 366.0
 offset_bottom = 23.0
 text = "100"
 
-[node name="Label" type="Label" parent="Label2/Music"]
+[node name="Label" type="Label" parent="Label2/Music" unique_id=572110210]
 layout_mode = 0
 offset_left = -3.0
 offset_top = -42.0
@@ -135,13 +135,13 @@ offset_right = 48.0
 theme_override_font_sizes/font_size = 30
 text = "Music"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_o2i8r")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1020539112]
+stream = ExtResource("5_dmegd")
 volume_db = 3.0
 autoplay = true
 bus = &"Music"
 
-[node name="Fullscreen" type="CheckButton" parent="."]
+[node name="Fullscreen" type="CheckButton" parent="." unique_id=1304882388]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.671
@@ -151,9 +151,9 @@ offset_top = 192.0
 offset_right = 111.007996
 offset_bottom = -108.0
 scale = Vector2(2, 2)
-script = ExtResource("6_n5wdl")
+script = ExtResource("6_8uakx")
 
-[node name="Label3" type="Label" parent="."]
+[node name="Label3" type="Label" parent="." unique_id=1787761531]
 layout_mode = 0
 offset_left = 696.0
 offset_top = 193.99997

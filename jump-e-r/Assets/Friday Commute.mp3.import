@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://n3ktfihdtwvo"
+path="res://.godot/imported/Friday Commute.mp3-ff33afd375a905b68c3e5e3616e94a07.mp3str"
+
+[deps]
+
+source_file="res://Assets/Friday Commute.mp3"
+dest_files=["res://.godot/imported/Friday Commute.mp3-ff33afd375a905b68c3e5e3616e94a07.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

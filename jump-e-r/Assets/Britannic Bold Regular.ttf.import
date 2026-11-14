@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://rl5w41rox601"
-path="res://.godot/imported/Britannic Bold Regular.ttf-e12ba37ce521d3c04053c335aa41882c.fontdata"
+path="res://.godot/imported/Britannic Bold Regular.ttf-30c6fbf12e34882dc22eb52546fb1812.fontdata"
 
 [deps]
 
-source_file="res://Britannic Bold Regular.ttf"
-dest_files=["res://.godot/imported/Britannic Bold Regular.ttf-e12ba37ce521d3c04053c335aa41882c.fontdata"]
+source_file="res://Assets/Britannic Bold Regular.ttf"
+dest_files=["res://.godot/imported/Britannic Bold Regular.ttf-30c6fbf12e34882dc22eb52546fb1812.fontdata"]
 
 [params]
 

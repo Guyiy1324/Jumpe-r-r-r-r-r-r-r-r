@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dmainau4rh23w"]
 
-[ext_resource type="Script" uid="uid://dfqb47cve2lnm" path="res://credits.gd" id="1_c1t8d"]
-[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="1_nm7lk"]
-[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Toenail.mp3" id="3_g4wvt"]
+[ext_resource type="Script" uid="uid://dfqb47cve2lnm" path="res://Scripts/credits.gd" id="1_ccovl"]
+[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="2_1bamb"]
+[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_xelri"]
 
 [node name="Credits" type="Control" unique_id=313220374]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_c1t8d")
+script = ExtResource("1_ccovl")
 
 [node name="Panel" type="Panel" parent="." unique_id=199991739]
 layout_mode = 0
@@ -54,7 +54,7 @@ offset_right = 145.0
 offset_bottom = -171.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_nm7lk")
+theme_override_fonts/font = ExtResource("2_1bamb")
 theme_override_font_sizes/font_size = 75
 text = "Crreduts"
 
@@ -75,7 +75,7 @@ theme_override_font_sizes/font_size = 30
 text = "Back"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=159258769]
-stream = ExtResource("3_g4wvt")
+stream = ExtResource("3_xelri")
 volume_db = 3.0
 autoplay = true
 
