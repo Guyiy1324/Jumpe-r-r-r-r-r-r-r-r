@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dk4eiqvunfb74"]
+[gd_scene format=3 uid="uid://dk4eiqvunfb74"]
 
 [ext_resource type="Script" path="res://options_&_credits.gd" id="1_4o6pv"]
 [ext_resource type="FontFile" path="res://Britannic Bold Regular.ttf" id="2_yveac"]
