@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://cu5newr2xfxd"]
+[gd_scene load_steps=12 format=3 uid="uid://cu5newr2xfxd"]
 
 [ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
-[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/icon.svg" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/Backgrounds/icon.svg" id="2_eiy7p"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
-[ext_resource type="Texture2D" path="res://Assets/button.png" id="button_art"]
-[ext_resource type="Texture2D" path="res://Assets/cog.png" id="cog_art"]
+[ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
+[ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
 texture = ExtResource("2_eiy7p")
