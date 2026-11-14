@@ -1,14 +1,17 @@
 extends Control
 
 
-# Called when the node enters the scene tree for the first time.
+const BACKGROUNDS: Array[Texture2D] = [
+	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 161914.png"),
+	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 161934.png"),
+	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162002.png"),
+	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162018.png"),
+	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162152.png"),
+]
+
+
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+	$Background.texture = BACKGROUNDS.pick_random()
 
 
 func _on_start_pressed() -> void:

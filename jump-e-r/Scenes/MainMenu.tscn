@@ -1,15 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cu5newr2xfxd"]
+[gd_scene load_steps=10 format=3 uid="uid://cu5newr2xfxd"]
 
 [ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
-[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/Backgrounds/icon.svg" id="2_eiy7p"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
 [ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
-texture = ExtResource("2_eiy7p")
-modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7a2f"]
 texture = ExtResource("button_art")
@@ -37,11 +32,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h7a2f")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 640.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_42r2q")
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
