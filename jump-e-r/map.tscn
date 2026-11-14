@@ -68,5 +68,5 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Player" parent="." instance=ExtResource("2_wijl4")]
-position = Vector2(-113.77186, -331.5108)
+position = Vector2(-110.064026, -316.91602)
 scale = Vector2(0.28012884, 2.9327412)
