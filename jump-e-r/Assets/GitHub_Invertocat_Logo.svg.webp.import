@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvmqn587u521b"
-path="res://.godot/imported/download (12).png-12d1f0996d01893a22aff57a6e98a53f.ctex"
+uid="uid://cwmjiviubsn3i"
+path="res://.godot/imported/GitHub_Invertocat_Logo.svg.webp-b3d959571cd806ff5e727863f7fcfefc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/download (12).png"
-dest_files=["res://.godot/imported/download (12).png-12d1f0996d01893a22aff57a6e98a53f.ctex"]
+source_file="res://Assets/GitHub_Invertocat_Logo.svg.webp"
+dest_files=["res://.godot/imported/GitHub_Invertocat_Logo.svg.webp-b3d959571cd806ff5e727863f7fcfefc.ctex"]
 
 [params]
 
