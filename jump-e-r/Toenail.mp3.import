@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/Toenail.mp3-3df3397baa960c3520d90d5c5e295c1e.
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
