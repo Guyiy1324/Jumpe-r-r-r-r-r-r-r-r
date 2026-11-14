@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://c213e04b25674"]
 
+[ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://options_&_credits.gd" id="1_4o6pv"]
+
 [node name="Options & Credits" type="Control" unique_id=1102423414]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_4o6pv")
 
 [node name="Panel" type="Panel" parent="." unique_id=1429513256]
 layout_mode = 1
@@ -18,9 +21,21 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=245998403]
 layout_mode = 0
-offset_left = 845.0
-offset_top = 520.0
-offset_right = 1111.0
-offset_bottom = 603.0
+offset_left = 519.0
+offset_top = 540.0
+offset_right = 785.0
+offset_bottom = 623.0
 theme_override_font_sizes/font_size = 50
 text = "Credits"
+
+[node name="Button2" type="Button" parent="." unique_id=1023301801]
+layout_mode = 0
+offset_left = 853.0
+offset_top = 539.0
+offset_right = 1119.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_back_pressed"]

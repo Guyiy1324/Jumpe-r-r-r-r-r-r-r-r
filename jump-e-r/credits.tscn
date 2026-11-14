@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dmainau4rh23w"]
 
+[ext_resource type="Script" uid="uid://dfqb47cve2lnm" path="res://credits.gd" id="1_c1t8d"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Britannic Bold Regular.ttf" id="1_nm7lk"]
 
 [node name="Credits" type="Control" unique_id=313220374]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_c1t8d")
 
 [node name="Panel" type="Panel" parent="." unique_id=199991739]
 layout_mode = 0
@@ -34,7 +36,8 @@ Programming: Hezikiah, Johny
 Sound Design: Jery
 Art and Visual Design: Jery, Godot, Google
 Getting hacked: Johny
-everything else: us"
+everything else: us
+Player: You!"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="Panel" unique_id=1059198405]
@@ -69,3 +72,5 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 text = "Back"
+
+[connection signal="pressed" from="Button" to="." method="_on_back_pressed"]
