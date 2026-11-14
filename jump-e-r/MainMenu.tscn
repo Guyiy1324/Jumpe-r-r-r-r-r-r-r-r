@@ -5,8 +5,12 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
 texture = ExtResource("2_eiy7p")
+modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7a2f"]
+texture = ExtResource("2_eiy7p")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_54mwi"]
 texture = ExtResource("2_eiy7p")
 
 [node name="MainMenu" type="Control" unique_id=1024877346]
@@ -50,6 +54,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 text = "
 Play Game
  
@@ -62,6 +67,7 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 text = " 
 Options & Credits
  "
@@ -72,17 +78,17 @@ size_flags_vertical = 3
 theme_override_colors/font_color = Color(1.4643909, 0.4986225, 1.3796744, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 text = "  
   Our Github
   
  "
 
-[node name="LinkButton" type="LinkButton" parent="." unique_id=1445002077]
+[node name="LinkButton" type="LinkButton" parent="VBoxContainer/Button3" unique_id=1445002077]
 layout_mode = 0
-offset_left = 281.0
-offset_top = 427.0
-offset_right = 840.0
-offset_bottom = 481.5
+offset_top = -2.25
+offset_right = 559.0
+offset_bottom = 52.25
 size_flags_horizontal = 4
 size_flags_vertical = 4
 offset_transform_enabled = true
@@ -100,6 +106,9 @@ offset_left = 2.0
 offset_top = 69.0
 offset_right = 1144.0
 offset_bottom = 276.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.2784314)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_font_sizes/font_size = 100
 text = "Jumpe r r r r r r r r"
