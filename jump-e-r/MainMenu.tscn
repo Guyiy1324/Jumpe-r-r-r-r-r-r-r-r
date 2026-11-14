@@ -94,11 +94,15 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 <<<<<<< HEAD
 text = "  
 
+<<<<<<< Updated upstream
   
 =======
 text = " 
  
 >>>>>>> 65246b3301e8cc6375d1ffdaeaa57e25c5ea7f59
+=======
+  Our Github
+>>>>>>> Stashed changes
  "
 
 [node name="LinkButton" type="LinkButton" parent="VBoxContainer/Button3"]
