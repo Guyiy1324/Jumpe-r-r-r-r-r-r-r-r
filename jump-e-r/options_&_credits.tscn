@@ -16,11 +16,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="." unique_id=245998403]
+[node name="Button2" type="Button" parent="." unique_id=1460921096]
 layout_mode = 0
-offset_left = 845.0
-offset_top = 520.0
-offset_right = 1111.0
-offset_bottom = 603.0
-theme_override_font_sizes/font_size = 50
+offset_left = 928.0
+offset_top = 559.0
+offset_right = 1085.0
+offset_bottom = 618.0
+theme_override_font_sizes/font_size = 30
+text = "Back"
+
+[node name="Button3" type="Button" parent="." unique_id=1795130062]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 559.0
+offset_right = 870.0
+offset_bottom = 618.0
+theme_override_font_sizes/font_size = 30
 text = "Credits"
