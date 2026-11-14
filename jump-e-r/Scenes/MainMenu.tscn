@@ -1,16 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://cu5newr2xfxd"]
+[gd_scene load_steps=10 format=3 uid="uid://cu5newr2xfxd"]
 
 [ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
-[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/icon.svg" id="2_eiy7p"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
-[ext_resource type="Texture2D" uid="uid://bvmqn587u521b" path="res://Assets/download (12).png" id="6_xim88"]
 [ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
 [ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_42r2q"]
-texture = ExtResource("2_eiy7p")
-modulate_color = Color(0.5370987, 0.5370987, 0.5370987, 1)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7a2f"]
 texture = ExtResource("button_art")
@@ -38,11 +32,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_h7a2f")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 640.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_42r2q")
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 6
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -51,10 +50,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -295.0
+offset_left = -140.0
 offset_top = -6.0
-offset_right = 264.0
-offset_bottom = 159.5
+offset_right = 140.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -63,43 +62,38 @@ theme_override_constants/separation = 10
 
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+custom_minimum_size = Vector2(280, 70)
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h7a2f")
-text = "
-Play Game
- 
- "
+text = "Play Game"
 icon_alignment = 1
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+custom_minimum_size = Vector2(280, 70)
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h7a2f")
-text = " 
-
-Options & Credits
- 
- "
+text = "Options & Credits"
 
 [node name="Cog" type="TextureRect" parent="VBoxContainer/Button2"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 130.0
-offset_top = -21.75
-offset_right = 175.0
-offset_bottom = 21.25
+offset_left = 20.0
+offset_top = -17.0
+offset_right = 54.0
+offset_bottom = 17.0
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("cog_art")
@@ -108,15 +102,13 @@ stretch_mode = 5
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+custom_minimum_size = Vector2(280, 70)
+size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
-text = "  
-  
-
- "
+text = " "
 
 [node name="LinkButton" type="LinkButton" parent="VBoxContainer/Button3"]
 layout_mode = 1
@@ -139,15 +131,6 @@ theme_override_fonts/font = ExtResource("1_i26rj")
 text = "Our Github"
 underline = 1
 uri = "https://github.com/Guyiy1324/Jumpe-r-r-r-r-r-r-r-r"
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button3"]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 11.75
-offset_right = 174.0
-offset_bottom = 51.75
-texture = ExtResource("6_xim88")
-expand_mode = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
