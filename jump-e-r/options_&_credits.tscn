@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c213e04b25674"]
+[gd_scene load_steps=0 format=3 uid="uid://c213e04b25674"]
 
 [node name="Options & Credits" type="Control" unique_id=1102423414]
 layout_mode = 3

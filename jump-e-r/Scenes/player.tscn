@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://2avklsr514id"]
+
+[ext_resource type="Script" path="res://Scripts/player.tres.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" path="res://Assets/Backgrounds/icon.svg" id="2_i3pqv"]
+[ext_resource type="AudioStream" path="res://Assets/Bounce.mp3" id="3_6t5aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
+
+[node name="Player" type="Node2D" groups=["player"]]
+
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Area2D" groups=["player"]]
+physics_interpolation_mode = 1
+slide_on_ceiling = false
+floor_stop_on_slope = false
+floor_block_on_wall = false
+floor_max_angle = 1.553343
+script = ExtResource("1_cvnsp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/CharacterBody2D" groups=["player"]]
+scale = Vector2(6.4, 6.4)
+shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/CharacterBody2D" groups=["player"]]
+texture = ExtResource("2_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="Area2D/CharacterBody2D" groups=["player"]]
+zoom = Vector2(0.5, 0.5)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6t5aa")
