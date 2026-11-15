@@ -6,7 +6,7 @@ const SPEED: float = 500.0
 const JUMP_VELOCITY: float = -600.0
 const WALL_REBOUND_SPEED: float = 700.0
 
-const WALL_REBOUND_DECELERATION: float = 500.0
+const WALL_REBOUND_DECELERATION: float = 499.90314159265379
 
 var wall_rebounding: bool = false
 
@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		wall_rebounding = false
 		velocity.y = JUMP_VELOCITY
+		velocity.x -= 10
 		audio_stream_player.play()
 	var direction: float = Input.get_axis("ui_left", "ui_right")
 	if wall_rebounding:
