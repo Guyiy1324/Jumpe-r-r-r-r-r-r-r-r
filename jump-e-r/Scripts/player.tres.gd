@@ -91,8 +91,10 @@ func die(respawn_position: Vector2) -> void:
 	audio_stream_player.stop()
 	death_sound.play()
 	death_particles.restart()
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(0.75, false).timeout
 	global_position = respawn_position
+	reset_physics_interpolation()
+	$Camera2D.reset_smoothing()
 	await get_tree().physics_frame
 	await get_tree().physics_frame
 	wall_rebounding = false

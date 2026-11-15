@@ -14,18 +14,25 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="Jump e r"
-run/main_scene="uid://cu5newr2xfxd"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/name="Jumper Jump"
+run/main_scene="res://Scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+JumperState="*res://Scripts/jumper/game_state.gd"
 
 [audio]
 
-buses/default_bus_layout="uid://c4t0figybb581"
+buses/default_bus_layout="res://Assets/default_bus_layout.tres"
 
 [display]
 
-window/size/mode=2
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1152
+window/size/window_height_override=648
 window/stretch/mode="canvas_items"
 
 [global_group]
