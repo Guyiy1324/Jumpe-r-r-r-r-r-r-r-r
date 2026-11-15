@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var ball_sprite: Sprite2D = $Sprite2D
 
 const SPEED: float = 500.0
-const BALL_DIAMETER: float = 80.0
+const BALL_DIAMETER: float = 128.0
 const ACCELERATION: float = 3500.0
 const DECELERATION: float = 3000.0
 const JUMP_VELOCITY: float = -600.0
@@ -67,5 +67,8 @@ func _physics_process(delta: float) -> void:
 
 @export var jump_velocity: float = 400.0
 
-func bounce() -> void:
-	velocity.y = -jump_velocity * 3.0
+func bounce(bounce_velocity: float = jump_velocity * 3.0) -> void:
+	wall_rebounding = false
+	wall_input_lock_remaining = 0.0
+	has_wall_jumped = false
+	velocity.y = -bounce_velocity
