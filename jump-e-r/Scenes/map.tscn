@@ -23,6 +23,7 @@ func _on_body_entered(body: Node2D) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wijl4"]
+size = Vector2(19.779003, 20)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7jjh"]
 distance = -467.0
@@ -56,7 +57,7 @@ script = ExtResource("10_back")
 script = SubResource("GDScript_np2xp")
 
 [node name="Wall 1" type="StaticBody2D" parent="Section 1"]
-position = Vector2(2364, -1662.9999)
+position = Vector2(2403, -2135)
 scale = Vector2(-0.55796134, 5.039429)
 collision_layer = 3
 collision_mask = 3
@@ -69,7 +70,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Wall 2" type="StaticBody2D" parent="Section 1"]
-position = Vector2(2912, -1545)
+position = Vector2(2951, -2017)
 scale = Vector2(0.52429444, 12.794328)
 collision_layer = 3
 collision_mask = 3
@@ -82,9 +83,9 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Plat form" type="StaticBody2D" parent="Section 1"]
-position = Vector2(1249, -311)
+position = Vector2(1244.9999, -549.99994)
 rotation = -3.1415927
-scale = Vector2(0.46750772, -3.3631048)
+scale = Vector2(0.77976084, -5.1707826)
 collision_layer = 3
 collision_mask = 3
 
@@ -94,6 +95,23 @@ scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form"]
+position = Vector2(0, 0.5094452)
+scale = Vector2(1, 1.00398)
+texture = ExtResource("1_c7s6e")
+
+[node name="Plat form" type="StaticBody2D" parent="Section 1/Plat form"]
+position = Vector2(-1519.7002, -68.84836)
+rotation = -3.1415927
+scale = Vector2(0.75701046, -0.4655478)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Plat form/Plat form"]
+position = Vector2(0, 1.7840652)
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form/Plat form"]
 position = Vector2(0, 0.5094452)
 scale = Vector2(1, 1.00398)
 texture = ExtResource("1_c7s6e")
@@ -136,13 +154,14 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Floor" type="StaticBody2D" parent="Section 1"]
-position = Vector2(1891.0001, -643)
+position = Vector2(1928, -1114)
 scale = Vector2(4.5387645, 0.7640735)
 collision_layer = 3
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Floor"]
-scale = Vector2(13, 13)
+position = Vector2(-1.4364929, 0)
+scale = Vector2(12.999999, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Section 1/Floor"]
@@ -190,7 +209,7 @@ parameters/looping = true
 [node name="Marker2D" type="Marker2D" parent="."]
 
 [node name="WinCondition" parent="." instance=ExtResource("5_np2xp")]
-position = Vector2(1464, -2809)
+position = Vector2(1503, -3281)
 
 [node name="Hamburgoer" parent="." instance=ExtResource("8_6q3n4")]
 position = Vector2(1588, -209)
@@ -200,7 +219,7 @@ position = Vector2(-407, -545)
 scale = Vector2(0.09961599, 0.09961599)
 
 [node name="Boucne2" parent="." instance=ExtResource("7_6q3n4")]
-position = Vector2(2371.0002, -2349)
+position = Vector2(2410.0002, -2821)
 scale = Vector2(0.09961599, 0.09961599)
 
 [node name="Boucne3" parent="." instance=ExtResource("7_6q3n4")]
