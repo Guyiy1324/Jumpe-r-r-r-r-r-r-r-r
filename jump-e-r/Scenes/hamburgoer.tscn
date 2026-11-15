@@ -1,13 +1,44 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0wbcc2phpt2d"]
+[gd_scene load_steps=4 format=3 uid="uid://2fmxpxvg26p4"]
 
 [ext_resource type="Texture2D" uid="uid://db51wtyqa40i5" path="res://Assets/download.png" id="1_n5fnt"]
+
+[sub_resource type="GDScript" id="GDScript_n5fnt"]
+resource_name = "Hamburger move"
+script/source = "extends Area2D
+
+@export var distance_behind: float = 100.0
+
+var player: CharacterBody2D
+var last_direction: float = 1.0
+
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is CharacterBody2D:
+		player = body
+
+
+func _process(_delta: float) -> void:
+	if not is_instance_valid(player):
+		return
+
+	# Remember the player's last horizontal direction
+	if player.velocity.x != 0:
+		last_direction = sign(player.velocity.x)
+
+	# Place this Area2D behind the player
+	global_position = player.global_position - Vector2(
+		last_direction * distance_behind,
+		0
+	)
+"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5fnt"]
 radius = 53.009434
 
 [node name="Hamburgoer" type="Node2D"]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
+script = SubResource("GDScript_n5fnt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_n5fnt")
@@ -20,3 +51,5 @@ offset_bottom = 260.0
 scale = Vector2(0.27959895, 0.27959895)
 texture = ExtResource("1_n5fnt")
 expand_mode = 1
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

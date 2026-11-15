@@ -9,4 +9,4 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
 		body.velocity.y = -bounce_velocity
-		audio_stream_player.play()
+
