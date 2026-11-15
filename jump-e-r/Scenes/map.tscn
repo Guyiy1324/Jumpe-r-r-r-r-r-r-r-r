@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://brqtjd6cgsprf" path="res://Assets/game_background.jpg" id="9_background"]
 [ext_resource type="Script" path="res://Scripts/back_to_menu.gd" id="10_back"]
 [ext_resource type="Script" path="res://Scripts/game_background.gd" id="10_background"]
+[ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="13_5qtum"]
 
 [sub_resource type="GDScript" id="GDScript_np2xp"]
 resource_name = "Bounce Pad"
@@ -28,6 +29,10 @@ size = Vector2(19.779003, 20)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w7jjh"]
 distance = -467.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qtum"]
+bg_color = Color(0.53333336, 0.24705882, 0, 1)
+corner_detail = 14
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_5qtum")
@@ -101,23 +106,6 @@ position = Vector2(0, 0.5094452)
 scale = Vector2(1, 1.00398)
 texture = ExtResource("1_c7s6e")
 
-[node name="Plat form" type="StaticBody2D" parent="Section 1/Plat form"]
-position = Vector2(-1519.7002, -68.84836)
-rotation = -3.1415927
-scale = Vector2(0.75701046, -0.4655478)
-collision_layer = 3
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Plat form/Plat form"]
-position = Vector2(0, 1.7840652)
-scale = Vector2(13, 13)
-shape = SubResource("RectangleShape2D_wijl4")
-
-[node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form/Plat form"]
-position = Vector2(0, 0.5094452)
-scale = Vector2(1, 1.00398)
-texture = ExtResource("1_c7s6e")
-
 [node name="Platform little 2" type="StaticBody2D" parent="Section 1"]
 position = Vector2(242, -420.99997)
 scale = Vector2(1.0326793, 0.29627547)
@@ -183,6 +171,22 @@ shape = SubResource("RectangleShape2D_wijl4")
 [node name="Sprite2D" type="Sprite2D" parent="Section 1/Floor/Floor"]
 texture = ExtResource("1_c7s6e")
 
+[node name="Plat form2" type="StaticBody2D" parent="Section 1"]
+position = Vector2(2430.0024, -905.9999)
+scale = Vector2(0.5902871, 2.4072464)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Plat form2"]
+position = Vector2(0, 1.7840652)
+scale = Vector2(13, 13)
+shape = SubResource("RectangleShape2D_wijl4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form2"]
+position = Vector2(0, 0.5094452)
+scale = Vector2(1, 1.00398)
+texture = ExtResource("1_c7s6e")
+
 [node name="Platform" type="StaticBody2D" parent="Section 1"]
 position = Vector2(989, 150.00002)
 scale = Vector2(10.566976, 0.5868702)
@@ -200,13 +204,35 @@ texture = ExtResource("1_c7s6e")
 position = Vector2(36.99999, -1036)
 scale = Vector2(0.331263, 0.61997706)
 
+[node name="Miscellaneous" type="Node2D" parent="."]
+
+[node name="WinCondition" parent="Miscellaneous" instance=ExtResource("5_np2xp")]
+position = Vector2(1503, -3281)
+
+[node name="Hamburgoer" parent="Miscellaneous" instance=ExtResource("8_6q3n4")]
+position = Vector2(1588, -209)
+
+[node name="Boucne" parent="Miscellaneous" instance=ExtResource("7_6q3n4")]
+position = Vector2(-407, -545)
+scale = Vector2(0.09961599, 0.09961599)
+
+[node name="Boucne2" parent="Miscellaneous" instance=ExtResource("7_6q3n4")]
+position = Vector2(2410.0002, -2821)
+scale = Vector2(0.09961599, 0.09961599)
+
+[node name="Boucne3" parent="Miscellaneous" instance=ExtResource("7_6q3n4")]
+position = Vector2(379, -1034)
+scale = Vector2(0.09961599, 0.09961599)
+
+[node name="Boucne4" parent="Miscellaneous" instance=ExtResource("7_6q3n4")]
+position = Vector2(2272, 32)
+scale = Vector2(0.10392322, 0.10392322)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_w7jjh")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
-
-[node name="Player" parent="." instance=ExtResource("4_myvm1")]
 
 [node name="Marker2D" type="Marker2D" parent="."]
 
@@ -240,6 +266,60 @@ script = ExtResource("6_np2xp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneOfDeathAndDespair" groups=["player"]]
 shape = SubResource("WorldBoundaryShape2D_w7jjh")
+
+[node name="Bounce tutor" type="Panel" parent="."]
+offset_left = 418.0
+offset_top = -190.0
+offset_right = 975.22046
+offset_bottom = -22.192657
+rotation = -0.09802152
+mouse_filter = 1
+mouse_default_cursor_shape = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qtum")
+
+[node name="Label" type="Label" parent="Bounce tutor"]
+layout_mode = 0
+offset_left = 9.670529
+offset_top = 14.898894
+offset_right = 547.67053
+offset_bottom = 161.17859
+rotation = -0.010017745
+theme_override_colors/font_color = Color(0.8779391, 0.45377135, 0.09586304, 1)
+theme_override_colors/font_shadow_color = Color(0.49803922, 0.27058825, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(0, 0.53333336, 0.023529412, 1)
+theme_override_fonts/font = ExtResource("13_5qtum")
+theme_override_font_sizes/font_size = 28
+text = "Press Space on a wall to bounce back!!!!!!!
+	:3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vines tutor" type="Panel" parent="."]
+offset_left = -847.00006
+offset_top = -873.00006
+offset_right = -402.68768
+offset_bottom = -705.1927
+rotation = 0.12127597
+theme_override_styles/panel = SubResource("StyleBoxFlat_5qtum")
+
+[node name="Label" type="Label" parent="Vines tutor"]
+layout_mode = 0
+offset_left = 2.5868454
+offset_top = 10.050703
+offset_right = 444.90973
+offset_bottom = 156.3304
+rotation = -0.010017745
+theme_override_colors/font_color = Color(0.8779391, 0.45377135, 0.09586304, 1)
+theme_override_colors/font_shadow_color = Color(0.49803922, 0.27058825, 0.078431375, 1)
+theme_override_colors/font_outline_color = Color(0, 0.53333336, 0.023529412, 1)
+theme_override_fonts/font = ExtResource("13_5qtum")
+theme_override_font_sizes/font_size = 28
+text = "Vines Boost you high up!!!!!!!!!!
+:D"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("4_myvm1")]
 
 [connection signal="pressed" from="HUD/BackButton" to="HUD/BackButton" method="_on_pressed"]
 [connection signal="body_entered" from="ZoneOfDeathAndDespair" to="ZoneOfDeathAndDespair" method="_on_body_entered"]

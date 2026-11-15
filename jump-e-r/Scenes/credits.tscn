@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ch144sh88v34p"]
 
-[ext_resource type="Script" uid="uid://ccc4ngp7s0046" path="res://Scripts/credits.gd" id="1_ccovl"]
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_ccovl"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Audio Files/Toenail.mp3" id="3_g4wvt"]
 [ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
@@ -37,21 +37,28 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -291.5
-offset_top = -121.0
-offset_right = 308.5
-offset_bottom = 146.0
+offset_left = -171.5
+offset_top = -178.0
+offset_right = 188.5
+offset_bottom = 203.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_nm7lk")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 20
 text = "Hezikial, Johny, and Jery group
+
 Programming: Hezikial, Johny
+
 Sound Design: Jery
-Art and Visual Design: Jery, Godoe, le Goog
+
+Art and Visual Design: Jery, Johny,Godoe, le Goog
+
 Getting hacked: Johny
+
 Naps and Debugging: Jerry
+
 everything else: us
+
 Player: Me"
 horizontal_alignment = 1
 
@@ -62,15 +69,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -145.0
-offset_top = -247.0
-offset_right = 145.0
-offset_bottom = -171.0
+offset_left = -140.5
+offset_top = -272.0
+offset_right = 149.5
+offset_bottom = -196.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_nm7lk")
 theme_override_font_sizes/font_size = 75
-text = "Crreduts"
+text = "Crudiitts"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
