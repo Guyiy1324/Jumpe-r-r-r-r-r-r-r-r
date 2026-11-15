@@ -3,11 +3,23 @@ extends CharacterBody2D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 const SPEED: float = 500.0
+const ACCELERATION: float = 3500.0
+const DECELERATION: float = 3000.0
 const JUMP_VELOCITY: float = -600.0
 const WALL_REBOUND_SPEED: float = 700.0
+<<<<<<< Updated upstream
 const WALL_REBOUND_DECELERATION: float = 1500.0
+=======
+const WALL_INPUT_LOCK_TIME: float = 0.2
+
+const WALL_REBOUND_DECELERATION: float = 750
+>>>>>>> Stashed changes
 
 var wall_rebounding: bool = false
+var wall_input_lock_remaining: float = 0.0
+var wall_jump_normal_x: float = 0.0
+var last_wall_jump_height: float = 0.0
+var has_wall_jumped: bool = false
 
 
 func _physics_process(delta: float) -> void:
@@ -16,11 +28,17 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		wall_rebounding = false
+		wall_input_lock_remaining = 0.0
+		has_wall_jumped = false
 		velocity.y = JUMP_VELOCITY
+<<<<<<< Updated upstream
 		velocity.x -= 10.0
+=======
+>>>>>>> Stashed changes
 		audio_stream_player.play()
 
 	var direction: float = Input.get_axis("ui_left", "ui_right")
+<<<<<<< Updated upstream
 
 	if wall_rebounding:
 		# Allow the player to steer during the wall bounce.
@@ -43,15 +61,29 @@ func _physics_process(delta: float) -> void:
 			wall_rebounding = false
 
 	else:
+=======
+	wall_input_lock_remaining = maxf(0.0, wall_input_lock_remaining - delta)
+	if (wall_input_lock_remaining > 0.0 or (has_wall_jumped and velocity.y < 0.0)) and direction * wall_jump_normal_x < 0.0:
+		direction = 0.0
+	if wall_rebounding:
+>>>>>>> Stashed changes
 		if direction != 0.0:
-			velocity.x = direction * SPEED
+			wall_rebounding = false
 		else:
 			velocity.x = move_toward(
 				velocity.x,
 				0.0,
-				SPEED * delta
+				WALL_REBOUND_DECELERATION * delta
 			)
+<<<<<<< Updated upstream
 
+=======
+			if is_zero_approx(velocity.x):
+				wall_rebounding = false
+	if not wall_rebounding:
+		var acceleration: float = ACCELERATION if direction != 0.0 else DECELERATION
+		velocity.x = move_toward(velocity.x, direction * SPEED, acceleration * delta)
+>>>>>>> Stashed changes
 	move_and_slide()
 
 	if (
@@ -60,9 +92,22 @@ func _physics_process(delta: float) -> void:
 		and not is_on_floor()
 	):
 		var wall_normal: Vector2 = get_wall_normal()
+<<<<<<< Updated upstream
 
 		velocity.y = JUMP_VELOCITY
 		velocity.x = wall_normal.x * WALL_REBOUND_SPEED
 		wall_rebounding = true
 
 		audio_stream_player.play()
+=======
+		var same_wall_side: bool = has_wall_jumped and wall_normal.x * wall_jump_normal_x > 0.0
+		if not same_wall_side or global_position.y >= last_wall_jump_height:
+			wall_jump_normal_x = wall_normal.x
+			last_wall_jump_height = global_position.y
+			has_wall_jumped = true
+			wall_input_lock_remaining = WALL_INPUT_LOCK_TIME
+			velocity.y = JUMP_VELOCITY
+			velocity.x = wall_normal.x * WALL_REBOUND_SPEED
+			wall_rebounding = true
+			audio_stream_player.play()
+>>>>>>> Stashed changes
