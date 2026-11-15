@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ds3xeopn13qoa"]
+
+[ext_resource type="Script" uid="uid://1itxbxrsn870" path="res://Scripts/win_condition.gd" id="1_ugchd"]
+[ext_resource type="Texture2D" uid="uid://of6adsnjwmjx" path="res://Assets/Backgrounds/Screenshot 2026-11-14 172657.png" id="2_4qthh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5mr4"]
+size = Vector2(45, 73)
+
+[node name="WinCondition" type="Node2D"]
+script = ExtResource("1_ugchd")
+
+[node name="Area2D" type="Area2D" parent="." groups=["hamburger"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_s5mr4")
+
+[node name="TextureRect" type="TextureRect" parent="Area2D"]
+offset_left = -22.0
+offset_top = -37.000004
+offset_right = 50.0
+offset_bottom = 34.999996
+scale = Vector2(0.6159843, 1.0165596)
+texture = ExtResource("2_4qthh")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

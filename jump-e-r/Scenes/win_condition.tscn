@@ -7,6 +7,7 @@
 size = Vector2(45, 73)
 
 [node name="WinCondition" type="Node2D"]
+visible = false
 script = ExtResource("1_ugchd")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -23,3 +24,5 @@ scale = Vector2(0.6159843, 1.0165596)
 texture = ExtResource("2_4qthh")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
