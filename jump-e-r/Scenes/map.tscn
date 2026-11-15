@@ -99,7 +99,7 @@ scale = Vector2(1, 1.00398)
 texture = ExtResource("1_c7s6e")
 
 [node name="Platform little 2" type="StaticBody2D" parent="Section 1"]
-position = Vector2(160, -427.99997)
+position = Vector2(242, -420.99997)
 scale = Vector2(1.0326793, 0.29627547)
 collision_layer = 3
 collision_mask = 3
@@ -112,7 +112,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Platform little" type="StaticBody2D" parent="Section 1"]
-position = Vector2(631, -359)
+position = Vector2(713, -352)
 scale = Vector2(1.1257999, 0.28024262)
 collision_layer = 3
 collision_mask = 3
@@ -125,7 +125,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Tiny one" type="StaticBody2D" parent="Section 1"]
-position = Vector2(-361.99997, -469.99994)
+position = Vector2(-279.99997, -462.99994)
 scale = Vector2(1.6201365, 0.3303762)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Tiny one"]
@@ -175,7 +175,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Node2D" parent="Section 1" instance=ExtResource("2_q0mm3")]
-position = Vector2(-45.000004, -1043)
+position = Vector2(36.99999, -1036)
 scale = Vector2(0.331263, 0.61997706)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -195,7 +195,7 @@ position = Vector2(1464, -2809)
 position = Vector2(1588, -209)
 
 [node name="Boucne" parent="." instance=ExtResource("7_6q3n4")]
-position = Vector2(-489, -552)
+position = Vector2(-407, -545)
 scale = Vector2(0.09961599, 0.09961599)
 
 [node name="Boucne2" parent="." instance=ExtResource("7_6q3n4")]
@@ -203,7 +203,7 @@ position = Vector2(2371.0002, -2349)
 scale = Vector2(0.09961599, 0.09961599)
 
 [node name="Boucne3" parent="." instance=ExtResource("7_6q3n4")]
-position = Vector2(297, -1041)
+position = Vector2(379, -1034)
 scale = Vector2(0.09961599, 0.09961599)
 
 [node name="Boucne4" parent="." instance=ExtResource("7_6q3n4")]
