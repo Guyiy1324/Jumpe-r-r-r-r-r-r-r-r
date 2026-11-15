@@ -57,3 +57,8 @@ func _physics_process(delta: float) -> void:
 			velocity.x = wall_normal.x * WALL_REBOUND_SPEED
 			wall_rebounding = true
 			audio_stream_player.play()
+
+@export var jump_velocity: float = 400.0
+
+func bounce() -> void:
+	velocity.y = -jump_velocity * 3.0
