@@ -40,6 +40,8 @@ scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
+position = Vector2(0, 0.5094452)
+scale = Vector2(1, 1.00398)
 texture = ExtResource("1_c7s6e")
 
 [node name="Platform little 2" type="StaticBody2D" parent="Platforms"]
