@@ -3,6 +3,8 @@ extends CharacterBody2D
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var ball_sprite: Sprite2D = $Sprite2D
 @onready var collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var death_particles: CPUParticles2D = $DeathParticles
+@onready var death_sound: AudioStreamPlayer = $DeathSound
 @onready var ball_radius: float = (collision_shape.shape as CircleShape2D).radius * collision_shape.scale.x
 
 const SPEED: float = 500.0
@@ -18,6 +20,7 @@ var wall_input_lock_remaining: float = 0.0
 var wall_jump_normal_x: float = 0.0
 var last_wall_jump_height: float = 0.0
 var has_wall_jumped: bool = false
+var is_dead: bool = false
 
 
 func _ready() -> void:
@@ -69,7 +72,34 @@ func _physics_process(delta: float) -> void:
 @export var jump_velocity: float = 400.0
 
 func bounce(bounce_velocity: float = jump_velocity * 3.0) -> void:
+	if is_dead:
+		return
 	wall_rebounding = false
 	wall_input_lock_remaining = 0.0
 	has_wall_jumped = false
 	velocity.y = -bounce_velocity
+
+
+func die(respawn_position: Vector2) -> void:
+	if is_dead:
+		return
+	is_dead = true
+	set_physics_process(false)
+	velocity = Vector2.ZERO
+	ball_sprite.hide()
+	collision_shape.set_deferred("disabled", true)
+	audio_stream_player.stop()
+	death_sound.play()
+	death_particles.restart()
+	await get_tree().create_timer(2.0).timeout
+	global_position = respawn_position
+	await get_tree().physics_frame
+	await get_tree().physics_frame
+	wall_rebounding = false
+	wall_input_lock_remaining = 0.0
+	has_wall_jumped = false
+	ball_sprite.rotation = 0.0
+	ball_sprite.show()
+	collision_shape.set_deferred("disabled", false)
+	is_dead = false
+	set_physics_process(true)

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ddsruacacub78" path="res://Assets/Vines'.png" id="1_7xy0e"]
 [ext_resource type="Script" uid="uid://c10lmpt4lnsd4" path="res://Scenes/boucne.gd" id="1_fb3c3"]
-[ext_resource type="AudioStream" uid="uid://brp0n5r6oylbf" path="res://Assets/Audio Files/spring.wav" id="2_y0bvp"]
+[ext_resource type="AudioStream" path="res://Assets/bounce.mp3" id="2_y0bvp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y0bvp"]
 size = Vector2(1174.0953, 16.179817)
@@ -15,6 +15,7 @@ texture = ExtResource("1_7xy0e")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_y0bvp")
+bus = &"SFX"
 
 [node name="Area2D" type="Area2D" parent="."]
 
