@@ -6,16 +6,30 @@
 resource_name = "Hamburger move"
 script/source = "extends Area2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@export var distance_behind: float = 100.0
+
+var player: CharacterBody2D
+var last_direction: float = 1.0
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is CharacterBody2D:
-		print(\"work\")
-		position.x = $player.position.x - 1
-		position.y = $player.position.y - 1
+		player = body
+
+
+func _process(_delta: float) -> void:
+	if not is_instance_valid(player):
+		return
+
+	# Remember the player's last horizontal direction
+	if player.velocity.x != 0:
+		last_direction = sign(player.velocity.x)
+
+	# Place this Area2D behind the player
+	global_position = player.global_position - Vector2(
+		last_direction * distance_behind,
+		0
+	)
 "
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5fnt"]
