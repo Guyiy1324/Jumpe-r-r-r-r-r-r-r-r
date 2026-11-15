@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var sound_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 const SPEED = 500.0
 const JUMP_VELOCITY = -600.0
 
@@ -13,8 +13,8 @@ func _physics_process(delta: float) -> void:
 
 	# Handle jump.
 	if is_on_floor():
+			audio_stream_player.play()
 			velocity.y = JUMP_VELOCITY
-			sound_player.play()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.

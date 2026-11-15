@@ -156,6 +156,7 @@ vertical_alignment = 1
 stream = ExtResource("4_qoqlk")
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="GitHubInvertocatLogo_svg" type="Sprite2D" parent="."]
 position = Vector2(487, 512)

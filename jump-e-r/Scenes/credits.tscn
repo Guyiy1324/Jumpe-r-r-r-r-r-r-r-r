@@ -1,22 +1,22 @@
-[gd_scene format=3 uid="uid://ch144sh88v34p"]
+[gd_scene load_steps=8 format=3 uid="uid://ch144sh88v34p"]
 
 [ext_resource type="Script" uid="uid://ccc4ngp7s0046" path="res://Scripts/credits.gd" id="1_ccovl"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_nm7lk"]
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_g4wvt"]
-[ext_resource type="Texture2D" path="res://Assets/button.png" id="button_art"]
+[ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
 
 [sub_resource type="StyleBoxTexture" id="button_normal"]
 texture = ExtResource("button_art")
-
-[sub_resource type="StyleBoxTexture" id="button_hover"]
-texture = ExtResource("button_art")
-modulate_color = Color(1.2, 1.2, 1.2, 1)
 
 [sub_resource type="StyleBoxTexture" id="button_pressed"]
 texture = ExtResource("button_art")
 modulate_color = Color(0.72, 0.72, 0.72, 1)
 
-[node name="Credits" type="Control" unique_id=1820686762]
+[sub_resource type="StyleBoxTexture" id="button_hover"]
+texture = ExtResource("button_art")
+modulate_color = Color(1.2, 1.2, 1.2, 1)
+
+[node name="Credits" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,12 +25,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ccovl")
 
-[node name="Panel" type="Panel" parent="." unique_id=1430112871]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 1145.0
 offset_bottom = 650.0
 
-[node name="Label" type="Label" parent="Panel" unique_id=519912891]
+[node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -53,7 +53,7 @@ everything else: us
 Player: You!"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel" unique_id=1617967818]
+[node name="Label2" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -70,7 +70,7 @@ theme_override_fonts/font = ExtResource("1_nm7lk")
 theme_override_font_sizes/font_size = 75
 text = "Crreduts"
 
-[node name="Button" type="Button" parent="." unique_id=1336857040]
+[node name="Button" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -85,14 +85,15 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("button_normal")
-theme_override_styles/hover = SubResource("button_hover")
 theme_override_styles/pressed = SubResource("button_pressed")
+theme_override_styles/hover = SubResource("button_hover")
 text = "Back"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1412878892]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_g4wvt")
 volume_db = 3.0
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [connection signal="pressed" from="Button" to="." method="_on_back_pressed"]

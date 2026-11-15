@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://Scripts/music.gd" id="4_n5wdl"]
 [ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://Scripts/fullscreen.gd" id="6_n5wdl"]
 [ext_resource type="Script" uid="uid://3uipo7ss383i" path="res://Scenes/option_button.gd" id="8_m7ol0"]
-[ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
+[ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
 
 [sub_resource type="StyleBoxTexture" id="button_normal"]
 texture = ExtResource("button_art")
@@ -157,6 +157,7 @@ stream = ExtResource("3_o2i8r")
 volume_db = 3.0
 autoplay = true
 bus = &"Music"
+parameters/looping = true
 
 [node name="Fullscreen" type="CheckButton" parent="."]
 layout_mode = 1
