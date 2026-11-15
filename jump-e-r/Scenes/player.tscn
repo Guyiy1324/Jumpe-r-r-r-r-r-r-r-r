@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://b4mqx81580ntb"]
 
 [ext_resource type="Script" uid="uid://ctlvvcwxy3bvs" path="res://Scripts/player.tres.gd" id="1_cvnsp"]
-[ext_resource type="Texture2D" uid="uid://ds42pbjgq7jap" path="res://Assets/Backgrounds/icon.svg" id="2_i3pqv"]
+[ext_resource type="Texture2D" path="res://Assets/player_ball.svg" id="2_i3pqv"]
 [ext_resource type="AudioStream" uid="uid://cujwtadsprr12" path="res://Assets/Audio Files/Bounce.mp3" id="3_6t5aa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4flbx"]
@@ -28,6 +28,7 @@ scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_4flbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D/CharacterBody2D" groups=["player"]]
+texture_filter = 2
 texture = ExtResource("2_i3pqv")
 
 [node name="Camera2D" type="Camera2D" parent="Area2D/CharacterBody2D" groups=["player"]]
