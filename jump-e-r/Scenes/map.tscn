@@ -42,7 +42,6 @@ shape = SubResource("RectangleShape2D_wijl4")
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
 position = Vector2(0, 0.5094452)
 scale = Vector2(1, 1.00398)
