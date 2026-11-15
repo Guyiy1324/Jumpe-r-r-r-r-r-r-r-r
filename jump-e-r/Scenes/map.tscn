@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://bpgrtefjqp3k7"]
 
 [ext_resource type="Texture2D" uid="uid://bok0r4vdxd48i" path="res://Assets/Dirt.png" id="1_c7s6e"]
-[ext_resource type="PackedScene" path="res://Scenes/instantiantor.tscn" id="2_q0mm3"]
+[ext_resource type="PackedScene" uid="uid://df115ednb6skn" path="res://Scenes/instantiantor.tscn" id="2_q0mm3"]
 [ext_resource type="AudioStream" uid="uid://de1qtw4ufhiw3" path="res://Assets/Audio Files/Project Rusher - SURR3AL (Noteblock Cover).mp3" id="3_w7jjh"]
 [ext_resource type="PackedScene" uid="uid://b4mqx81580ntb" path="res://Scenes/player.tscn" id="4_myvm1"]
 [ext_resource type="PackedScene" uid="uid://ds3xeopn13qoa" path="res://Scenes/win_condition.tscn" id="5_np2xp"]
@@ -189,3 +189,4 @@ script = ExtResource("6_np2xp")
 shape = SubResource("WorldBoundaryShape2D_w7jjh")
 
 [connection signal="body_entered" from="ZoneOfDeathAndDespair" to="ZoneOfDeathAndDespair" method="_on_body_entered"]
+[connection signal="pressed" from="HUD/BackButton" to="HUD/BackButton" method="_on_pressed"]
