@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://Scripts/options_&_credits.gd" id="1_4o6pv"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="2_yveac"]
 [ext_resource type="Script" uid="uid://cysrelxgu210s" path="res://Scripts/sfx.gd" id="3_0hipb"]
-[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_o2i8r"]
+[ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Audio Files/Toenail.mp3" id="3_o2i8r"]
 [ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://Scripts/music.gd" id="4_n5wdl"]
 [ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://Scripts/fullscreen.gd" id="6_n5wdl"]
 [ext_resource type="Script" uid="uid://3uipo7ss383i" path="res://Scripts/option_button.gd" id="8_m7ol0"]

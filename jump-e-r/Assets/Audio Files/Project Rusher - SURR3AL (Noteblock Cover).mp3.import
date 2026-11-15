@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://de1qtw4ufhiw3"
+path="res://.godot/imported/Project Rusher - SURR3AL (Noteblock Cover).mp3-224caf8c10a8d471f40271615ec171e5.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio Files/Project Rusher - SURR3AL (Noteblock Cover).mp3"
+dest_files=["res://.godot/imported/Project Rusher - SURR3AL (Noteblock Cover).mp3-224caf8c10a8d471f40271615ec171e5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
