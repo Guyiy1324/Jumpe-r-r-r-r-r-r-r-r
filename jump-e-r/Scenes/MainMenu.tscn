@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
-[ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
+[ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Audio Files/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://cwmjiviubsn3i" path="res://Assets/GitHub_Invertocat_Logo.svg.webp" id="6_8um5k"]
 [ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
 [ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mnytywcjvjjg"
+path="res://.godot/imported/Toenail.mp3-fe388f4a1b8eb6219c7e264bb316b2b8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio Files/Toenail.mp3"
+dest_files=["res://.godot/imported/Toenail.mp3-fe388f4a1b8eb6219c7e264bb316b2b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
