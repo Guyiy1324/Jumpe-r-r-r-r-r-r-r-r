@@ -159,7 +159,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 texture = ExtResource("1_c7s6e")
 
 [node name="Node2D" parent="Section 1" instance=ExtResource("2_q0mm3")]
-position = Vector2(-45.00003, -853.00006)
+position = Vector2(-45.000004, -1043)
 scale = Vector2(0.331263, 0.61997706)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
