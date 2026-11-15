@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 			)
 	move_and_slide()
 	if (
-		Input.is_action_just_pressed("ui_accept")
+		Input.is_action_just_pressed("Jump")
 		and is_on_wall()
 		and not is_on_floor()
 	):
