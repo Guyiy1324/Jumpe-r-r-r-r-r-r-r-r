@@ -1,5 +1,7 @@
 extends Control
 
+const ROBLOX_GAME_URI: String = "roblox://placeId=109983668079237"
+const ROBLOX_GAME_URL: String = "https://www.roblox.com/games/109983668079237/Steal-a-Brainrot"
 
 const BACKGROUNDS: Array[Texture2D] = [
 	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 161914.png"),
@@ -22,7 +24,12 @@ func _ready() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/map.tscn")
+	if randi_range(0, 1) == 0:
+		get_tree().change_scene_to_file("res://Scenes/map.tscn")
+	else:
+		var error: Error = OS.shell_open(ROBLOX_GAME_URI)
+		if error != OK:
+			OS.shell_open(ROBLOX_GAME_URL)
 
 
 func _on_options_pressed() -> void:
