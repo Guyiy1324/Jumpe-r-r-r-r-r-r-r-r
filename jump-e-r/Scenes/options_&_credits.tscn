@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cv14wmy676i5u"]
+[gd_scene load_steps=12 format=3 uid="uid://cv14wmy676i5u"]
 
 [ext_resource type="Script" uid="uid://8jpy5bhmuqv4" path="res://Scripts/options_&_credits.gd" id="1_4o6pv"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="2_yveac"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://mnytywcjvjjg" path="res://Assets/Toenail.mp3" id="3_o2i8r"]
 [ext_resource type="Script" uid="uid://bvtu7qkotcooa" path="res://Scripts/music.gd" id="4_n5wdl"]
 [ext_resource type="Script" uid="uid://by6s8i7o4okd4" path="res://Scripts/fullscreen.gd" id="6_n5wdl"]
+[ext_resource type="Script" uid="uid://3uipo7ss383i" path="res://Scenes/option_button.gd" id="8_m7ol0"]
 [ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
 
 [sub_resource type="StyleBoxTexture" id="button_normal"]
@@ -180,8 +181,27 @@ offset_bottom = 235.99997
 theme_override_font_sizes/font_size = 30
 text = "Fullscreen"
 
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 280.99997
+offset_right = 941.0
+offset_bottom = 345.0
+focus_mode = 0
+focus_behavior_recursive = 1
+allow_reselect = true
+item_count = 3
+popup/item_0/text = "useless"
+popup/item_0/id = 0
+popup/item_1/text = "dropdown"
+popup/item_1/id = 1
+popup/item_2/text = "menu"
+popup/item_2/id = 2
+script = ExtResource("8_m7ol0")
+
 [connection signal="pressed" from="Button" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_back_pressed"]
 [connection signal="value_changed" from="Label2/SFX" to="Label2/SFX" method="_on_value_changed"]
 [connection signal="value_changed" from="Label2/Music" to="Label2/Music" method="_on_value_changed"]
 [connection signal="toggled" from="Fullscreen" to="Fullscreen" method="_on_toggled"]
+[connection signal="item_selected" from="OptionButton" to="OptionButton" method="_on_item_selected"]

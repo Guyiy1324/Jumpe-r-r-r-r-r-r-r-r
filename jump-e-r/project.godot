@@ -28,6 +28,10 @@ buses/default_bus_layout="uid://c4t0figybb581"
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[global_group]
+
+player="y"
+
 [input]
 
 ui_accept={
