@@ -6,7 +6,7 @@ const SPEED: float = 500.0
 const JUMP_VELOCITY: float = -600.0
 const WALL_REBOUND_SPEED: float = 700.0
 
-const WALL_REBOUND_DECELERATION: float = 499.90314159265379
+const WALL_REBOUND_DECELERATION: float = 1500
 
 var wall_rebounding: bool = false
 
@@ -24,7 +24,7 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(
 			velocity.x,
 			0.0,
-			WALL_REBOUND_DECELERATION * delta
+			WALL_REBOUND_DECELERATION * log(delta)
 		)
 		if is_zero_approx(velocity.x):
 			velocity.x = 0.0
