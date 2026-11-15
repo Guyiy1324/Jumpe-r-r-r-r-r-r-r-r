@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var ball_sprite: Sprite2D = $Sprite2D
 
 const SPEED: float = 500.0
+const BALL_DIAMETER: float = 80.0
 const ACCELERATION: float = 3500.0
 const DECELERATION: float = 3000.0
 const JUMP_VELOCITY: float = -600.0
@@ -15,6 +17,10 @@ var wall_input_lock_remaining: float = 0.0
 var wall_jump_normal_x: float = 0.0
 var last_wall_jump_height: float = 0.0
 var has_wall_jumped: bool = false
+
+
+func _ready() -> void:
+	ball_sprite.scale = Vector2.ONE * (BALL_DIAMETER / ball_sprite.texture.get_width())
 
 
 func _physics_process(delta: float) -> void:
@@ -44,6 +50,7 @@ func _physics_process(delta: float) -> void:
 		var acceleration: float = ACCELERATION if direction != 0.0 else DECELERATION
 		velocity.x = move_toward(velocity.x, direction * SPEED, acceleration * delta)
 	move_and_slide()
+	ball_sprite.rotate(get_position_delta().x / (BALL_DIAMETER / 2.0))
 
 	if Input.is_action_just_pressed("Jump") and is_on_wall() and not is_on_floor():
 		var wall_normal: Vector2 = get_wall_normal()

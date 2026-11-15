@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cu5newr2xfxd"]
+[gd_scene load_steps=12 format=3 uid="uid://cu5newr2xfxd"]
 
 [ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Audio Files/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://cwmjiviubsn3i" path="res://Assets/GitHub_Invertocat_Logo.svg.webp" id="6_8um5k"]
+[ext_resource type="Texture2D" uid="uid://rc6u8hrpf8h8" path="res://Assets/Main menu button.png" id="7_xim88"]
 [ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
 [ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]
 
@@ -195,6 +196,11 @@ parameters/looping = true
 position = Vector2(727, 537)
 scale = Vector2(0.148, 0.148)
 texture = ExtResource("6_8um5k")
+
+[node name="MainMenuButton" type="Sprite2D" parent="."]
+position = Vector2(723, 361)
+scale = Vector2(-0.21756093, -0.21756093)
+texture = ExtResource("7_xim88")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
