@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cu5newr2xfxd"]
 
-[ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://cwmjiviubsn3i" path="res://Assets/GitHub_Invertocat_Logo.svg.webp" id="6_8um5k"]
@@ -82,8 +82,8 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 32
 theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
@@ -98,8 +98,8 @@ size_flags_vertical = 0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 32
 theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 32
 theme_override_styles/normal = SubResource("StyleBoxTexture_h7a2f")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_eiy7p")
 theme_override_styles/hover = SubResource("StyleBoxTexture_54mwi")
@@ -111,10 +111,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -16.0
-offset_right = 54.0
-offset_bottom = 18.0
+offset_left = 334.0
+offset_top = -17.0
+offset_right = 368.0
+offset_bottom = 17.0
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("cog_art")
@@ -154,12 +154,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 32
 theme_override_fonts/font = ExtResource("1_i26rj")
+theme_override_font_sizes/font_size = 32
 text = "Our Github"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -171,11 +170,11 @@ offset_top = 69.0
 offset_right = 1144.0
 offset_bottom = 276.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
-theme_override_constants/outline_size = 5
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_font_sizes/font_size = 100
 text = "Jumper Jump"
@@ -189,7 +188,7 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="GitHubInvertocatLogo_svg" type="Sprite2D" parent="."]
-position = Vector2(487, 512)
+position = Vector2(727, 537)
 scale = Vector2(0.148, 0.148)
 texture = ExtResource("6_8um5k")
 
