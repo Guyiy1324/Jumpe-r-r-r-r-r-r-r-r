@@ -7,7 +7,7 @@ const BACKGROUNDS: Array[Texture2D] = [
 	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162002.png"),
 	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162018.png"),
 	preload("res://Assets/Backgrounds/Screenshot 2026-11-14 162152.png"),
-	preload("res://Assets/Backgrounds/icon.svg")
+	preload("res://Assets/Backgrounds/icon.png")
 ]
 
 
