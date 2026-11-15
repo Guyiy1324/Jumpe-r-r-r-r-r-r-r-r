@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cu5newr2xfxd"]
 
-[ext_resource type="Script" uid="uid://7sxv2crb123o" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_h7a2f"]
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Audio Files/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://cwmjiviubsn3i" path="res://Assets/GitHub_Invertocat_Logo.svg.webp" id="6_8um5k"]
@@ -111,10 +111,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -16.0
-offset_right = 54.0
-offset_bottom = 18.0
+offset_left = 334.0
+offset_top = -17.0
+offset_right = 368.0
+offset_bottom = 17.0
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("cog_art")
@@ -188,7 +188,7 @@ bus = &"Music"
 parameters/looping = true
 
 [node name="GitHubInvertocatLogo_svg" type="Sprite2D" parent="."]
-position = Vector2(487, 512)
+position = Vector2(727, 537)
 scale = Vector2(0.148, 0.148)
 texture = ExtResource("6_8um5k")
 
