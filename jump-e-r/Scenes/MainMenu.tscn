@@ -4,7 +4,7 @@
 [ext_resource type="FontFile" uid="uid://rl5w41rox601" path="res://Assets/Britannic Bold Regular.ttf" id="1_i26rj"]
 [ext_resource type="AudioStream" uid="uid://n3ktfihdtwvo" path="res://Assets/Friday Commute.mp3" id="4_qoqlk"]
 [ext_resource type="Texture2D" uid="uid://cwmjiviubsn3i" path="res://Assets/GitHub_Invertocat_Logo.svg.webp" id="6_8um5k"]
-[ext_resource type="Texture2D" uid="uid://csuctqgdh7ehw" path="res://Assets/button.png" id="button_art"]
+[ext_resource type="Texture2D" uid="uid://c5qejg6avkdpx" path="res://Assets/button.png" id="button_art"]
 [ext_resource type="Texture2D" uid="uid://bq0ficeo67te6" path="res://Assets/cog.png" id="cog_art"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h7a2f"]
@@ -148,7 +148,7 @@ theme_override_constants/shadow_offset_x = 6
 theme_override_constants/shadow_offset_y = 6
 theme_override_fonts/font = ExtResource("1_i26rj")
 theme_override_font_sizes/font_size = 100
-text = "Jumpe r r r r r r r r"
+text = "Jumper Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
 
