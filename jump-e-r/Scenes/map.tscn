@@ -43,6 +43,7 @@ shape = SubResource("RectangleShape2D_wijl4")
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
 position = Vector2(0, 0.5094452)
 scale = Vector2(1, 1.00398)
@@ -58,6 +59,9 @@ scale = Vector2(1, 1.00398)
 =======
 [node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form"]
 >>>>>>> Stashed changes
+=======
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Plat form"]
+>>>>>>> Stashed changes
 texture = ExtResource("1_c7s6e")
 
 [node name="Platform little 2" type="StaticBody2D" parent="Section 1"]
@@ -66,11 +70,11 @@ scale = Vector2(1.0326793, 0.29627547)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform little 2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Platform little 2"]
 scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform little 2"]
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Platform little 2"]
 texture = ExtResource("1_c7s6e")
 
 [node name="Platform little" type="StaticBody2D" parent="Section 1"]
@@ -79,25 +83,25 @@ scale = Vector2(1.1257999, 0.28024262)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Platform little"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Platform little"]
 scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/Platform little"]
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Platform little"]
 texture = ExtResource("1_c7s6e")
 
-[node name="Tiny one" type="StaticBody2D" parent="Platforms"]
+[node name="Tiny one" type="StaticBody2D" parent="Section 1"]
 position = Vector2(-271, -470)
 scale = Vector2(1.6201365, 0.3303762)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platforms/Tiny one"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Section 1/Tiny one"]
 scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/Tiny one"]
+[node name="Sprite2D" type="Sprite2D" parent="Section 1/Tiny one"]
 texture = ExtResource("1_c7s6e")
 
-[node name="Node2D" parent="Platforms" instance=ExtResource("2_q0mm3")]
+[node name="Node2D" parent="Section 1" instance=ExtResource("2_q0mm3")]
 position = Vector2(-45.00003, -853.00006)
 scale = Vector2(0.331263, 0.61997706)
 
