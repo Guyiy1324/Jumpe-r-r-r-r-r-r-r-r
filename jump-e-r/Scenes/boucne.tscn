@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://q6g27blykwqe"]
+
+[ext_resource type="Texture2D" uid="uid://ddsruacacub78" path="res://Assets/Vines'.png" id="1_7xy0e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0bvp"]
+size = Vector2(1174.0953, 16.179817)
+
+[node name="Boucne" type="Node2D" groups=["player"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_7xy0e")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-62.88739, 219.94823)
+scale = Vector2(1.3114563, 27.806028)
+shape = SubResource("RectangleShape2D_y0bvp")
