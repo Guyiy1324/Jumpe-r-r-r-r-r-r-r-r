@@ -54,9 +54,7 @@ scale = Vector2(1, 1.00398)
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
 >>>>>>> Stashed changes
 =======
-[node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
->>>>>>> Stashed changes
-=======
+
 [node name="Sprite2D" type="Sprite2D" parent="Platforms/Plat form"]
 >>>>>>> Stashed changes
 =======
