@@ -146,6 +146,7 @@ scale = Vector2(13, 13)
 shape = SubResource("RectangleShape2D_wijl4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Section 1/Floor"]
+position = Vector2(-0.8812866, 0)
 texture = ExtResource("1_c7s6e")
 
 [node name="Floor" type="StaticBody2D" parent="Section 1/Floor"]
